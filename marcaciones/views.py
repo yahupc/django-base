@@ -26,5 +26,6 @@ def tasks(request):
     # tasks = Task.objects.get(id=id)
     # tasks = get_object_or_404(Task, id=id)
     #return HttpResponse("tasks: %s" % tasks.title)
-    tasks = list(Task.objects.values()
+    #tasks = list(Task.objects.values())
+    tasks = Task.objects.all()
     return render(request,'tasks.html',{'tasks': tasks})
